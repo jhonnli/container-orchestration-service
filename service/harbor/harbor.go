@@ -2,11 +2,8 @@ package harbor
 
 import (
 	"encoding/base64"
-	"../container-orchestration-api/model/proxy"
-	"../../service/common"
-	proxy2 "../../service/proxy"
 	//"github.com/jhonnli/container-orchestration-api/model/proxy"
-	//"github.com/jhonnli/container-orchestration-service/service/common"
+	"github.com/jhonnli/container-orchestration-service/service/common"
 	//proxy2 "github.com/jhonnli/container-orchestration-service/service/proxy"
 	"net/http"
 	"net/url"
@@ -29,9 +26,9 @@ func NewHarborClient() *harborClient {
 	return &harborClient{}
 }
 
-func (hs *harborClient) getHarborAuthInfo(harbor string) proxy.HarborAuthInfo {
-	return proxy2.CmdbProxy.GetHarborAuthInfo(harbor)
-}
+//func (hs *harborClient) getHarborAuthInfo(harbor string) proxy.HarborAuthInfo {
+//	return proxy2.CmdbProxy.GetHarborAuthInfo(harbor)
+//}
 
 func (hs harborClient) getURL(urlStr string) *url.URL {
 	var scheme string
@@ -52,12 +49,19 @@ func (hs harborClient) getURL(urlStr string) *url.URL {
 }
 
 func (hs harborClient) GetClient(harbor string) *common.RestClient {
-	authInfo := hs.getHarborAuthInfo(harbor)
-
-	client := common.NewRestClient(hs.getURL(authInfo.Server), 15)
+	//authInfo := hs.getHarborAuthInfo(harbor)
+	/**
+	@TODO 填充harbor的url信息，考虑从配置文件里面读取,填充用户名密码
+	*/
+	var harbor_url = " "
+	client := common.NewRestClient(hs.getURL(harbor_url), 15)
+	//client := common.NewRestClient(hs.getURL(authInfo.Server), 15)
 
 	header := &http.Header{}
-	header.Set("Authorization", "Basic "+basicAuth(authInfo.Username, authInfo.Password))
+	var harbor_username = ""
+	var harbor_password = ""
+	header.Set("Authorization", "Basic "+basicAuth(harbor_username, harbor_password))
+	//header.Set("Authorization", "Basic "+basicAuth(authInfo.Username, authInfo.Password))
 	client.Header = header
 	return client
 }

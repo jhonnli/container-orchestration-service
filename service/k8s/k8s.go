@@ -2,7 +2,7 @@ package k8s
 
 import (
 	"fmt"
-	"github.com/jhonnli/container-orchestration-service/service/proxy"
+	//"github.com/jhonnli/container-orchestration-service/service/proxy"
 	"github.com/jhonnli/logs"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
@@ -54,13 +54,16 @@ func (kc *k8sClient) getClientset(env string) *kubernetes.Clientset {
 }
 
 func (kc *k8sClient) getConfig(env string) *rest.Config {
-	authInfo := proxy.CmdbProxy.GetK8sClusterInfo(env)
-	config, err := clientcmd.BuildConfigFromFlags(authInfo.Master, "")
+	//@TODO 原从cmdb中读取k8s的配置信息需要改成从配置文件中读取
+	//authInfo := proxy.CmdbProxy.GetK8sClusterInfo(env)
+	var k8s_master = ""
+	var k8s_token = ""
+	config, err := clientcmd.BuildConfigFromFlags(k8s_master, "")
 	if err != nil {
 		panic(err)
 	}
 	config.Insecure = true
-	config.BearerToken = authInfo.Token
+	config.BearerToken = k8s_token
 	return config
 }
 

@@ -131,7 +131,7 @@ func ParamIsEmpty(ctx *gin.Context, code string, params ...string) bool {
 func AddFilter(rg *gin.RouterGroup) {
 	//rg.Use(filter.ClientAuth())
 	//rg.Use(filter.JWTMiddleware())
-	rg.Use(filter.CORSMiddleware())
+	//rg.Use(filter.CORSMiddleware())
 }
 
 func AddApiFilter(rg *gin.RouterGroup) {
