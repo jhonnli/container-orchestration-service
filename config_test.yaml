@@ -1,0 +1,9 @@
+listen:
+  domain: "" # 外部访问本服务的地址，路径必须以/结尾
+  address: "0.0.0.0:8080"
+cmdb:
+  # address: "http://aiops-aiops-cmdb-service.hfjy.com/v1/open/"
+  address: "http://svc-aiops-aiops-cmdb-service:8080/v1/open/"
+  appId: 104
+  token: "a6qsYFzT+Vhwvt3ZS_M9$P+aXrKoX9tZ"
+  isDebug: false
