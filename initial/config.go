@@ -2,7 +2,7 @@ package initial
 
 import (
 	"github.com/fsnotify/fsnotify"
-	"github.com/jhonnli/golib/logs"
+	"github.com/jhonnli/logs"
 	"github.com/spf13/viper"
 	"log"
 	"os"

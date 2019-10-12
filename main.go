@@ -7,7 +7,7 @@ import (
 	"github.com/jhonnli/container-orchestration-service/service/harbor"
 	"github.com/jhonnli/container-orchestration-service/service/k8s"
 	"github.com/jhonnli/container-orchestration-service/service/proxy"
-	"github.com/jhonnli/golib/logs"
+	"github.com/jhonnli/logs"
 )
 
 func main() {

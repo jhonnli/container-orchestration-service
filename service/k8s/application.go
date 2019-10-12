@@ -3,7 +3,7 @@ package k8s
 import (
 	sapi "github.com/jhonnli/container-orchestration-api/api/k8s"
 	"github.com/jhonnli/container-orchestration-api/model/k8s"
-	"github.com/jhonnli/golib/logs"
+	"github.com/jhonnli/logs"
 )
 
 func NewApplicationService() sapi.ApplicationInterface {

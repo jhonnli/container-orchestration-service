@@ -3,7 +3,7 @@ package k8s
 import (
 	"fmt"
 	"github.com/jhonnli/container-orchestration-api/api/k8s"
-	"github.com/jhonnli/golib/logs"
+	"github.com/jhonnli/logs"
 	coreV1 "k8s.io/api/core/v1"
 	v12 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/client-go/kubernetes/typed/core/v1"

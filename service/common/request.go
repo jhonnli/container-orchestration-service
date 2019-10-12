@@ -3,7 +3,7 @@ package common
 import (
 	"bytes"
 	"fmt"
-	"github.com/jhonnli/golib/logs"
+	"github.com/jhonnli/logs"
 	"github.com/json-iterator/go"
 	"io"
 	"io/ioutil"

@@ -3,7 +3,7 @@ package harbor
 import (
 	harbor2 "github.com/jhonnli/container-orchestration-api/api/harbor"
 	"github.com/jhonnli/container-orchestration-api/model/harbor"
-	"github.com/jhonnli/golib/logs"
+	"github.com/jhonnli/logs"
 )
 
 func NewRepositoryService() harbor2.RepositoryInterface {

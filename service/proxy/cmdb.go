@@ -8,7 +8,7 @@ import (
 	"github.com/jhonnli/container-orchestration-api/model/k8s"
 	"github.com/jhonnli/container-orchestration-api/model/proxy"
 	"github.com/jhonnli/container-orchestration-service/initial"
-	"github.com/jhonnli/golib/logs"
+	"github.com/jhonnli/logs"
 	"github.com/patrickmn/go-cache"
 	"sync"
 	"time"

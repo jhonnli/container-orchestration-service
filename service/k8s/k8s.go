@@ -3,7 +3,7 @@ package k8s
 import (
 	"fmt"
 	"github.com/jhonnli/container-orchestration-service/service/proxy"
-	"github.com/jhonnli/golib/logs"
+	"github.com/jhonnli/logs"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apimachinery/pkg/runtime/serializer"

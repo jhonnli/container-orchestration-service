@@ -3,7 +3,7 @@ package k8s
 import (
 	k8s2 "github.com/jhonnli/container-orchestration-api/api/k8s"
 	"github.com/jhonnli/container-orchestration-api/model/k8s"
-	"github.com/jhonnli/golib/logs"
+	"github.com/jhonnli/logs"
 	v1beta12 "k8s.io/api/extensions/v1beta1"
 	"k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/util/intstr"

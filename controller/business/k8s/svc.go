@@ -6,7 +6,7 @@ import (
 	"github.com/jhonnli/container-orchestration-api/model/k8s"
 	"github.com/jhonnli/container-orchestration-service/controller/common"
 	k8s3 "github.com/jhonnli/container-orchestration-service/service/k8s"
-	"github.com/jhonnli/golib/logs"
+	"github.com/jhonnli/logs"
 	"net/http"
 )
 

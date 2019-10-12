@@ -1,6 +1,6 @@
 package initial
 
-import "github.com/jhonnli/golib/logs"
+import "github.com/jhonnli/logs"
 
 func InitLog() {
 	logs.Async()

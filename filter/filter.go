@@ -2,7 +2,7 @@ package filter
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/jhonnli/golib/logs"
+	"github.com/jhonnli/logs"
 )
 
 const (

@@ -5,7 +5,7 @@ import (
 	"fmt"
 	k8s2 "github.com/jhonnli/container-orchestration-api/api/k8s"
 	"github.com/jhonnli/container-orchestration-api/model/k8s"
-	"github.com/jhonnli/golib/logs"
+	"github.com/jhonnli/logs"
 	"k8s.io/api/autoscaling/v2beta1"
 	"k8s.io/apimachinery/pkg/api/resource"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
